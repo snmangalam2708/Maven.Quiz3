@@ -56,6 +56,7 @@ public class VowelUtils {
         }
         return false;
     }
-    }
+}
+
 
 

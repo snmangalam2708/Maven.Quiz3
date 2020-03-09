@@ -13,15 +13,19 @@ public class Student {
     Student student;
 
     public Student() {
+
         this(new ArrayList<>());
     }
 
     public Student(List<Lab> labs) {
+
         this.labs =labs;
     }
 
     public Lab getLab(String labName) {
+
         for (int i = 0; i < labs.size(); i++) {
+
             if (labs.get(i).getName().equals(labName)) {
                 return labs.get(i);
             }
@@ -30,6 +34,7 @@ public class Student {
     }
 
     public void setLabStatus(String labName, LabStatus labStatus) {
+
         try {
             Lab foundLab = getLab(labName);
             foundLab.setStatus(labStatus);}
@@ -40,18 +45,20 @@ public class Student {
     }
 
     public void forkLab(Lab lab) {
+
         lab.setStatus(LabStatus.PENDING);
         labs.add(lab);
     }
 
     public LabStatus getLabStatus(String labName) {
+
         return getLab(labName).getStatus();
     }
 
     @Override
     public String toString() {
+
         String result = "";
-        StringBuilder sb = new StringBuilder();
         for(int i = labs.size() -1; i >= 0; i--) {
             if (i == 0) {
                 result += labs.get(i).toString();
