@@ -11,9 +11,6 @@ public class TicTacToe {
         this.board = board;
     }
 
-    public TicTacToe() {
-    }
-
     public String[] getRow(Integer value) {
         String[] row = new String[3];
         for (int i = 0; i <= 2; i++) {
